@@ -15,7 +15,6 @@ class MessageController extends Controller
      */
     public function index()
     {
-        $this->middleware('auth');
         $messages = Message::all();
         return view('messages.index', compact('messages'));
     }
@@ -38,7 +37,6 @@ class MessageController extends Controller
      */
     public function store(StoreRequest $request)
     {
-        return "bonsoir";
         Message::create($request->validated());
         return redirect()->route('home')->with('success', 'Message envoyé avec succès!');
     }

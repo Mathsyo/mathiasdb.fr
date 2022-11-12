@@ -21,4 +21,5 @@ Route::get('/home', [PageController::class, 'home'])->name('home');
 
 Auth::routes(['register' => false]);
 
-Route::resource('messages', MessageController::class)->only('index', 'store');
+Route::get('/messages', [MessageController::class, 'index'])->middleware('auth')->name('messages.index');
+Route::post('/messages', [MessageController::class, 'store'])->name('messages.store');

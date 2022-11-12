@@ -38,6 +38,7 @@ class MessageController extends Controller
      */
     public function store(StoreRequest $request)
     {
+        return "bonsoir";
         Message::create($request->validated());
         return redirect()->route('home')->with('success', 'Message envoyé avec succès!');
     }

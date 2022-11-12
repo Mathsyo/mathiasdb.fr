@@ -227,11 +227,11 @@
                         @csrf
                         <div class="mb-3">
                             <label class="form-label">Votre email :</label>
-                            <input type="email" class="form-control p-2 px-3">
+                            <input type="email" name="email" class="form-control p-2 px-3">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Votre message : </label>
-                            <textarea type="email" class="form-control p-2 px-3" rows="5"></textarea>
+                            <textarea type="email" name="content" class="form-control p-2 px-3" rows="5"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-lg w-100">
                             Envoyer
